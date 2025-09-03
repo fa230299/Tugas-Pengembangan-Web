@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Siswa</title>
+</head>
+
+<body>
+    <h1> Data Tinggi Badan yang Diurutkan</h1>
+    <div id="hasil">
+        <script>
+            let dataSiswa = {
+                "Rose": 178 ,
+                "Magnolia": 153,
+                "Daisy": 165 ,
+                "Jasmine": 161, 
+                "Violet": 159
+            };
+            const namaUrut = Object.keys(dataSiswa).sort();
+            let hasil = "";
+            namaUrut.forEach(function (nama) {
+                hasil = hasil + nama + ":" + dataSiswa[nama] + "cm" + "<br>";
+            });
+
+            document.getElementById("hasil").innerHTML = hasil;
+        </script>
+    </div>
+</body>
+
+</html>
